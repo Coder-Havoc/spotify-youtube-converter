@@ -1,102 +1,88 @@
-# Spotify-to-YouTube Playlist Converter
+# 🎵 Spotify → YouTube Playlist Converter
 
-Easily convert your Spotify playlist into a private YouTube playlist in just a few steps!
+[![MIT License](https://img.shields.io/github/license/Coder-Havoc/spotify-youtube-converter)](LICENSE)
+[![Last Commit](https://img.shields.io/github/last-commit/Coder-Havoc/spotify-youtube-converter)](https://github.com/Coder-Havoc/spotify-youtube-converter/commits/main)
+[![Stars](https://img.shields.io/github/stars/Coder-Havoc/spotify-youtube-converter?style=social)](https://github.com/Coder-Havoc/spotify-youtube-converter/stargazers)
 
-## 🚀 Features
-
-* Fetches all track names from a Spotify playlist
-* Searches YouTube for the best matching video for each track
-* Automatically creates a YouTube playlist
-* Adds matched videos to the playlist
-* Outputs a shareable YouTube playlist link
-
-## 🔧 Setup
-
-### 1. Clone the Repository
-
-```bash
-$ git clone https://github.com/your-username/spotify-youtube-converter.git
-$ cd spotify-youtube-converter
-```
-
-### 2. Install Dependencies
-
-```bash
-$ pip install -r requirements.txt
-```
-
-### 3. Add Spotify API Credentials
-
-Create a `.env` file in the root directory:
-
-```
-SPOTIPY_CLIENT_ID=your_spotify_client_id
-SPOTIPY_CLIENT_SECRET=your_spotify_client_secret
-```
-
-### 4. Add YouTube API Credentials
-
-Place your `client_secrets.json` (from Google Cloud Console) in the `credentials/` directory.
-It should look like this:
-
-```json
-{
-  "installed": {
-    "client_id": "...",
-    "client_secret": "...",
-    "redirect_uris": ["http://localhost"]
-  }
-}
-```
-
-## ▶️ Running the Project
-
-```bash
-$ python main.py
-```
-
-Follow the prompts:
-
-* Paste your Spotify playlist URL
-* Enter a name for the YouTube playlist
-* Authenticate Google account (first time only)
-
-## 📁 Project Structure
-
-```
-spotify-youtube-converter/
-├── main.py
-├── spotify/
-│   └── spotify_client.py
-├── youtube/
-│   ├── youtube_playlist.py
-│   └── youtube_searcher.py
-├── utils/
-│   └── clean_title.py
-├── credentials/
-│   └── client_secrets.json
-│   └── token.json (auto-generated)
-└── .env
-```
-
-## ✅ Output
-
-A working YouTube playlist link is shown at the end:
-
-```
-🔗 View your playlist: https://www.youtube.com/playlist?list=...
-```
-
-## 🧠 Notes
-
-* Only public Spotify playlists are supported.
-* The YouTube playlist is created as **private**.
-* You can manually make the playlist public from your YouTube account.
-
-## 📜 License
-
-MIT License
+Convert your favorite Spotify playlists into YouTube playlists effortlessly using the YouTube Data API and Spotipy.  
+This tool allows you to transfer songs while maintaining titles, creates a new YouTube playlist, and adds the best-matching videos automatically.
 
 ---
 
-Built with ❤️ by Bhavya Shrivastava
+## 🚀 Features
+
+- ✅ Convert any public Spotify playlist to a YouTube playlist  
+- 🔍 Matches song titles intelligently via YouTube search  
+- 🧠 Cleans song names to improve search accuracy  
+- 📧 Uses OAuth to securely authenticate your Google account  
+- 📦 CLI-based, lightweight, and fully open-source  
+
+---
+
+## 🧰 Requirements
+
+- Python 3.8+
+- Google YouTube Data API OAuth credentials (`client_secrets.json`)
+- Spotify API credentials (via [Spotipy](https://spotipy.readthedocs.io))
+
+---
+
+## 🛠️ Installation
+
+```bash
+git clone https://github.com/Coder-Havoc/spotify-youtube-converter.git
+cd spotify-youtube-converter
+pip install -r requirements.txt
+```
+
+👉 Place your `client_secrets.json` file inside the `credentials/` folder.
+
+---
+
+## 📌 Usage
+
+```bash
+python main.py
+```
+
+Follow the prompts to:
+
+- Enter a Spotify playlist URL  
+- Name your new YouTube playlist  
+- Authenticate your YouTube account  
+- Watch it work! 🎉  
+
+---
+
+## 🗂️ Folder Structure
+
+```
+spotify-youtube-converter/
+│
+├── main.py
+├── requirements.txt
+├── .gitignore
+├── README.md
+├── credentials/
+│   └── (place your client_secrets.json here)
+├── utils/
+│   └── clean_title.py
+├── youtube/
+│   └── youtube_searcher.py
+```
+
+---
+
+## 🛡 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## ✨ Author
+
+**Bhavya Shrivastava**  
+📍 Vidisha, MP  
+📧 bhavya9755@gmail.com  
+🔗 [LinkedIn](https://www.linkedin.com/in/bhavya-shrivastava0107/)  
+🔗 [GitHub](https://github.com/Coder-Havoc)
