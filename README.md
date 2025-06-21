@@ -11,7 +11,8 @@ This tool allows you to transfer songs while maintaining titles, creates a new Y
 
 ## 🚀 Features
 
-- ✅ Convert any public Spotify playlist to a YouTube playlist  
+- ✅ Convert any public Spotify playlist to a YouTube playlist 
+- 🔄 Convert YouTube → Spotify playlists (coming soon) 
 - 🔍 Matches song titles intelligently via YouTube search  
 - 🧠 Cleans song names to improve search accuracy  
 - 📧 Uses OAuth to securely authenticate your Google account  
@@ -41,18 +42,26 @@ pip install -r requirements.txt
 
 ## 📌 Usage
 
-```bash
-python main.py
-```
+▶️ Spotify → YouTube (Working)
+
+  python main.py
 
 Follow the prompts to:
+- Paste a Spotify playlist link
+- Name your new YouTube playlist
+- Authenticate your Google account (browser popup)
+- Let the tool do the rest 🎉
 
-- Enter a Spotify playlist URL  
-- Name your new YouTube playlist  
-- Authenticate your YouTube account  
-- Watch it work! 🎉  
+🔄 YouTube → Spotify (Coming Soon)
 
----
+This feature will:
+- Parse a YouTube playlist URL
+- Extract and clean video titles
+- Search for matching tracks on Spotify
+- Create and populate a Spotify playlist via API
+
+Stay tuned!
+
 
 ## 🗂️ Folder Structure
 
