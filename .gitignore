@@ -1,0 +1,19 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+
+# Environment files
+.env
+
+# Credentials & tokens
+credentials/token.json
+
+# Selenium session
+cookies/
+
+# OS / Editor junk
+.DS_Store
+Thumbs.db
+
+# VS Code settings
+.vscode/
